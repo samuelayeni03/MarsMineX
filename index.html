@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarsMineX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Press Start 2P', monospace;
+      background-color: rgb(44, 43, 43);
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+      background-blend-mode:screen;
+      background-repeat: repeat;
+      background-size: cover;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 2em;
+      color: #b12a01;
+    }
+
+    nav {
+      display: flex;
+      color: #fff;
+      gap: 1rem;
+      font-size: 0.7rem;
+      flex-wrap: wrap;
+    }
+
+    .connectBtn {
+      border: 2px solid #b12a01;
+      background: whitesmoke;
+      color: #b12a01;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .connectBtn:hover {
+      background: #b12a01;
+      color: #000;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      display: none;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .hero h2 {
+      font-size: 1.5rem;
+      color: #b12a01;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin-bottom: 5rem;
+      color: whitesmoke;
+    }
+
+    .globe {
+      margin: 2rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .globe img {
+      width: 250px;
+      height: 250px;
+      fill: none;
+      stroke: #f43f5e;
+      stroke-width: 2;
+    }
+
+    .connect-section {
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+    
+    .logo {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero h1, .hero h2 {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">MarsMineX</div>
+    <nav>
+      <div>ABOUT</div>
+      <div>TRADE</div>
+      <div>WHITELIST</div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2><span id="mined">2,363,242</span> $MINE HAS ALREADY BEEN MINED.</h2>
+    <p>START EARNING TODAY.</p>
+
+    <div class="globe">
+      <img src="assets/mars-svgrepo-com.svg" alt="Mars">
+    </div>
+
+    <div class="connect-section">
+      <button class="connectBtn" id="connectBtn">CONNECT WALLET TO START MINING</button>
+      <p id="walletAddress"></p>
+    </div>
+  </section>
+  <script src="solana.js"></script>
+</body>
+</html>
